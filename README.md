@@ -1,2 +1,2 @@
 # otus
-Otus DC design
+Otus DC design. First description
