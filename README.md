@@ -1,2 +1,2 @@
 # otus
-Otus DC design. First description
+Otus DC design. First description success
