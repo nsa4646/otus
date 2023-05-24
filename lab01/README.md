@@ -68,3 +68,35 @@ interface Loopback1
    ip address 10.1.1.1/32  
 interface Vlan10  
    ip address 10.1.10.1/24  
+#### Leaf02
+vlan 20  
+interface Ethernet1  
+   no switchport  
+   ip address 169.254.0.9/30  
+interface Ethernet2  
+   no switchport  
+   ip address 169.254.0.13/30  
+interface Ethernet3  
+   switchport access vlan 20  
+   spanning-tree portfast  
+interface Loopback1  
+   ip address 10.1.2.1/32 
+interface Vlan20  
+   ip address 10.2.20.1/24  
+#### Leaf03
+vlan 30
+!
+interface Ethernet1  
+   no switchport  
+   ip address 169.254.0.17/30  
+interface Ethernet2  
+   no switchport  
+   ip address 169.254.0.21/30  
+interface Ethernet3  
+   switchport access vlan 30  
+   spanning-tree portfast  
+interface Ethernet4  
+   switchport access vlan 30  
+   spanning-tree portfast  
+interface Vlan30  
+   ip address 10.3.30.1/24  
