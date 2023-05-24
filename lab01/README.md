@@ -4,4 +4,4 @@
 2. Распределить адресное пространство для Underlay сети.
 
 ### Реализовать схему
-![Топология](C:\Users\sanikolaev\Downloads\Топология.png)
+[logo]: C:\Users\sanikolaev\Downloads\Топология.png
