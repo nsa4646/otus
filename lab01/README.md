@@ -27,3 +27,17 @@
 | PC1           | Ethernet0 | 10.1.10.2    | /24  |
 | PC2           | Ethernet0 | 10.2.20.2    | /24  |
 | PC3           | Ethernet0 | 10.3.30.2    | /24  |
+
+### Конфигурация устройств
+#### Spine01
+interface Ethernet1
+   no switchport
+   ip address 169.254.0.2/30
+interface Ethernet2
+   no switchport
+   ip address 169.254.0.10/30
+interface Ethernet3
+   no switchport
+   ip address 169.254.0.18/30
+interface Loopback1
+   ip address 10.0.1.1/32
