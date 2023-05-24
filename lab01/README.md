@@ -84,8 +84,7 @@ interface Loopback1
 interface Vlan20  
    ip address 10.2.20.1/24  
 #### Leaf03
-vlan 30
-!
+vlan 30  
 interface Ethernet1  
    no switchport  
    ip address 169.254.0.17/30  
@@ -100,3 +99,15 @@ interface Ethernet4
    spanning-tree portfast  
 interface Vlan30  
    ip address 10.3.30.1/24  
+#### PC1
+IP/MASK: 10.1.10.2/24  
+GATEWAY: 10.1.10.1  
+#### PC2
+IP/MASK: 10.2.20.2/24  
+GATEWAY: 10.2.20.1  
+#### PC3
+IP/MASK: 10.3.30.2/24  
+GATEWAY: 10.3.30.1  
+#### PC4
+IP/MASK: 10.3.30.3/24  
+GATEWAY: 10.3.30.1  
