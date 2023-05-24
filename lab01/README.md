@@ -41,3 +41,30 @@ interface Ethernet3
    ip address 169.254.0.18/30  
 interface Loopback1  
    ip address 10.0.1.1/32  
+#### Spine02
+interface Ethernet1  
+   no switchport  
+   ip address 169.254.0.6/30  
+interface Ethernet2  
+   no switchport  
+   ip address 169.254.0.14/30  
+interface Ethernet3  
+   no switchport  
+   ip address 169.254.0.22/30  
+interface Loopback1  
+   ip address 10.0.2.1/32 
+#### Leaf01
+vlan 10  
+interface Ethernet1  
+   no switchport  
+   ip address 169.254.0.1/30  
+interface Ethernet2  
+   no switchport  
+   ip address 169.254.0.5/30  
+interface Ethernet3  
+   switchport access vlan 10  
+   spanning-tree portfast  
+interface Loopback1  
+   ip address 10.1.1.1/32  
+interface Vlan10  
+   ip address 10.1.10.1/24  
