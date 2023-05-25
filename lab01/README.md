@@ -30,6 +30,7 @@
 
 ### Конфигурация устройств
 #### Spine01
+```
 interface Ethernet1  
    no switchport  
    ip address 169.254.0.2/30  
@@ -40,8 +41,10 @@ interface Ethernet3
    no switchport  
    ip address 169.254.0.18/30  
 interface Loopback1  
-   ip address 10.0.1.1/32  
+   ip address 10.0.1.1/32 
+``` 
 #### Spine02
+```
 interface Ethernet1  
    no switchport  
    ip address 169.254.0.6/30  
@@ -53,7 +56,9 @@ interface Ethernet3
    ip address 169.254.0.22/30  
 interface Loopback1  
    ip address 10.0.2.1/32 
+```
 #### Leaf01
+```
 vlan 10  
 interface Ethernet1  
    no switchport  
@@ -68,6 +73,7 @@ interface Loopback1
    ip address 10.1.1.1/32  
 interface Vlan10  
    ip address 10.1.10.1/24  
+```
 #### Leaf02
 vlan 20  
 interface Ethernet1  
@@ -110,4 +116,5 @@ IP/MASK: 10.3.30.2/24
 GATEWAY: 10.3.30.1  
 #### PC4
 IP/MASK: 10.3.30.3/24  
-GATEWAY: 10.3.30.1  
+GATEWAY: 10.3.30.1 
+``` 
