@@ -4,7 +4,7 @@
 2. Распределить адресное пространство для Underlay сети.
 
 ### Реализовать схему
-![Топология](C:\Otus\otus\lab01\Topology.PNG)
+![Топология](/c/Otus/otus/lab01/Topology.PNG)
 
 ### Таблица адресов
 | Device        | Interface | IP Address   | Mask |
