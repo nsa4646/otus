@@ -5,6 +5,7 @@
 
 ### Реализовать схему
 ![Топология](/c/Otus/otus/lab01/Topology.PNG)
+![first](Topology.PNG)
 
 ### Таблица адресов
 | Device        | Interface | IP Address   | Mask |
