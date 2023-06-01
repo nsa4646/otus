@@ -34,13 +34,13 @@
 ```
 interface Ethernet1  
    no switchport  
-   ip address 169.254.0.2/30  
+   ip address 172.16.0.11/31  
 interface Ethernet2  
    no switchport  
-   ip address 169.254.0.10/30  
+   ip address 172.16.0.15/31
 interface Ethernet3  
    no switchport  
-   ip address 169.254.0.18/30  
+   ip address 172.16.0.19/31  
 interface Loopback1  
    ip address 10.0.1.1/32 
 ``` 
@@ -48,13 +48,13 @@ interface Loopback1
 ```
 interface Ethernet1  
    no switchport  
-   ip address 169.254.0.6/30  
+   ip address 172.16.0.13/31 
 interface Ethernet2  
    no switchport  
-   ip address 169.254.0.14/30  
+   ip address 172.16.0.17/31  
 interface Ethernet3  
    no switchport  
-   ip address 169.254.0.22/30  
+   ip address 172.16.0.21/31  
 interface Loopback1  
    ip address 10.0.2.1/32 
 ```
@@ -63,10 +63,10 @@ interface Loopback1
 vlan 10  
 interface Ethernet1  
    no switchport  
-   ip address 169.254.0.1/30  
+   ip address 172.16.0.10/31  
 interface Ethernet2  
    no switchport  
-   ip address 169.254.0.5/30  
+   ip address 172.16.0.12/31  
 interface Ethernet3  
    switchport access vlan 10  
    spanning-tree portfast  
@@ -80,10 +80,10 @@ interface Vlan10
 vlan 20  
 interface Ethernet1  
    no switchport  
-   ip address 169.254.0.9/30  
+   ip address 172.16.0.14/31  
 interface Ethernet2  
    no switchport  
-   ip address 169.254.0.13/30  
+   ip address 172.16.0.16/31  
 interface Ethernet3  
    switchport access vlan 20  
    spanning-tree portfast  
@@ -97,10 +97,10 @@ interface Vlan20
 vlan 30  
 interface Ethernet1  
    no switchport  
-   ip address 169.254.0.17/30  
+   ip address 172.16.0.18/31  
 interface Ethernet2  
    no switchport  
-   ip address 169.254.0.21/30  
+   ip address 172.16.0.20/31  
 interface Ethernet3  
    switchport access vlan 30  
    spanning-tree portfast  
