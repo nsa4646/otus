@@ -8,7 +8,7 @@
 5. Проверить связность межуд PC1, PC2, PC3.
 
 ### Реализовать схему
-![Topology](Topology.PNG)
+![Area 0](Area%200.PNG)
 
 ### Таблица адресов
 | Device        | Interface | IP Address   | Mask |
@@ -351,4 +351,3 @@ Link ID         ADV Router      Age        Seq#       Checksum Link Count
 
 #### PC3
 ![PC3](PC3.PNG)
-```
