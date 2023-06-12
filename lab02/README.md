@@ -344,12 +344,11 @@ Link ID         ADV Router      Age        Seq#       Checksum Link Count
 ```
 ### Вывод связности между устройствами PC1, PC2, PC3
 #### PC1
-```
 ![PC1](PC1.PNG)
-```
-```
-![](PC2.PNG)
-```
-```
-![](PC3.PNG)
+
+#### PC2
+![PC2](PC2.PNG)
+
+#### PC3
+![PC3](PC3.PNG)
 ```
