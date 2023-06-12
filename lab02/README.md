@@ -20,13 +20,13 @@
 |               | Ethernet3 | 172.16.0.21  | /31  |
 | Leaf01        | Ethernet1 | 172.16.0.10  | /31  |
 |               | Ethernet2 | 172.16.0.12  | /31  |
-|               | vlan10    | 10.1.10.1    | /24  |
+|               | Ethernet3 | 10.1.10.1    | /24  |
 | Leaf02        | Ethernet1 | 172.16.0.14  | /31  |
 |               | Ethernet2 | 172.16.0.16  | /31  |
-|               | vlan20    | 10.2.20.1    | /24  |
+|               | Ethernet3 | 10.2.20.1    | /24  |
 | Leaf03        | Ethernet1 | 172.16.0.18  | /31  |
 |               | Ethernet2 | 172.16.0.20  | /31  |
-|               | vlan30    | 10.3.30.1    | /24  |
+|               | Ethernet3 | 10.3.30.1    | /24  |
 | PC1           | Ethernet0 | 10.1.10.2    | /24  |
 | PC2           | Ethernet0 | 10.2.20.2    | /24  |
 | PC3           | Ethernet0 | 10.3.30.2    | /24  |
@@ -128,6 +128,10 @@ interface Ethernet1/2
   no ip ospf passive-interface
   ip router ospf 1 area 0.0.0.0
   no shutdown
+interface Ethernet1/3
+  no switchport
+  ip address 10.1.10.1/24
+  no shutdown
 router ospf 1
   router-id 10.10.10.1
   area 0.0.0.0 range 10.1.10.0/24
@@ -156,6 +160,10 @@ interface Ethernet1/2
   no ip ospf passive-interface
   ip router ospf 1 area 0.0.0.0
   no shutdown
+interface Ethernet1/3
+  no switchport
+  ip address 10.2.20.1/24
+  no shutdown
 router ospf 1
   router-id 10.10.10.2
   area 0.0.0.0 range 10.2.20.0/24
@@ -183,6 +191,10 @@ interface Ethernet1/2
   ip ospf network point-to-point
   no ip ospf passive-interface
   ip router ospf 1 area 0.0.0.0
+  no shutdown
+interface Ethernet1/3
+  no switchport
+  ip address 10.3.30.1/24
   no shutdown
 router ospf 1
   router-id 10.10.10.3
