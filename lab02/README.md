@@ -131,6 +131,7 @@ interface Ethernet1/2
 interface Ethernet1/3
   no switchport
   ip address 10.1.10.1/24
+  ip router ospf 1 area 0.0.0.0
   no shutdown
 router ospf 1
   router-id 10.10.10.1
@@ -163,6 +164,7 @@ interface Ethernet1/2
 interface Ethernet1/3
   no switchport
   ip address 10.2.20.1/24
+  ip router ospf 1 area 0.0.0.0
   no shutdown
 router ospf 1
   router-id 10.10.10.2
@@ -195,6 +197,7 @@ interface Ethernet1/2
 interface Ethernet1/3
   no switchport
   ip address 10.3.30.1/24
+  ip router ospf 1 area 0.0.0.0
   no shutdown
 router ospf 1
   router-id 10.10.10.3
