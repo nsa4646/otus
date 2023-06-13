@@ -70,6 +70,7 @@ router ospf 1
   area 0.0.0.0 range 172.16.0.10/31
   area 0.0.0.0 range 172.16.0.14/31
   area 0.0.0.0 range 172.16.0.18/31
+  passive-interface default
 ``` 
 #### Spine02
 ```
@@ -107,6 +108,7 @@ router ospf 1
   area 0.0.0.0 range 172.16.0.12/31
   area 0.0.0.0 range 172.16.0.16/31
   area 0.0.0.0 range 172.16.0.20/31
+  passive-interface default
 ```
 #### Leaf01
 ```
@@ -140,6 +142,7 @@ router ospf 1
   area 0.0.0.0 range 10.10.10.1/32
   area 0.0.0.0 range 172.16.0.10/31
   area 0.0.0.0 range 172.16.0.12/31
+  passive-interface default
 ```
 #### Leaf02
 ```
@@ -173,6 +176,7 @@ router ospf 1
   area 0.0.0.0 range 10.10.10.2/32
   area 0.0.0.0 range 172.16.0.14/31
   area 0.0.0.0 range 172.16.0.16/31
+  passive-interface default
 ```
 #### Leaf03
 ```
@@ -206,6 +210,7 @@ router ospf 1
   area 0.0.0.0 range 10.10.10.3/32
   area 0.0.0.0 range 172.16.0.18/31
   area 0.0.0.0 range 172.16.0.20/31
+  passive-interface default
 
 ``` 
 #### PC1
