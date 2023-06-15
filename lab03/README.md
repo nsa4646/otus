@@ -217,3 +217,113 @@ GATEWAY: 10.3.30.1
 IP/MASK: 10.3.30.3/24  
 GATEWAY: 10.3.30.1 
 ``` 
+
+### Вывод IS-IS соседства и топологии между устрйоствами
+#### Spine01
+```
+Spine01# sh isis 1 adjacency
+IS-IS process: 1 VRF: default
+IS-IS adjacency database:
+Legend: '!': No AF level connectivity in given topology
+System ID       SNPA            Level  State  Hold Time  Interface
+Leaf01          N/A             1      UP     00:00:27   Ethernet1/1
+Leaf02          N/A             1      UP     00:00:29   Ethernet1/2
+Leaf03          N/A             1      UP     00:00:28   Ethernet1/3
+```
+```
+Spine01# sh isis 1 database
+IS-IS Process: 1 LSP database VRF: default
+IS-IS Level-1 Link State Database
+  LSPID                 Seq Number   Checksum  Lifetime   A/P/O/T
+  Leaf01.00-00          0x00000013   0xBFC4    941        0/0/0/1
+  Leaf02.00-00          0x00000013   0x57F1    976        0/0/0/1
+  Leaf03.00-00          0x00000012   0xF01E    1038       0/0/0/1
+  Spine01.00-00       * 0x00000014   0xA01E    811        0/0/0/1
+  Spine02.00-00         0x0000000E   0xBEED    1020       0/0/0/1
+```
+#### Spine02
+```
+Spine02# sh isis 1 adjacency
+IS-IS process: 1 VRF: default
+IS-IS adjacency database:
+Legend: '!': No AF level connectivity in given topology
+System ID       SNPA            Level  State  Hold Time  Interface
+Leaf01          N/A             1      UP     00:00:33   Ethernet1/1
+Leaf02          N/A             1      UP     00:00:25   Ethernet1/2
+Leaf03          N/A             1      UP     00:00:24   Ethernet1/3
+```
+```
+Spine02# sh isis 1 database
+IS-IS Process: 1 LSP database VRF: default
+IS-IS Level-1 Link State Database
+  LSPID                 Seq Number   Checksum  Lifetime   A/P/O/T
+  Leaf01.00-00          0x00000013   0xBFC4    897        0/0/0/1
+  Leaf02.00-00          0x00000013   0x57F1    931        0/0/0/1
+  Leaf03.00-00          0x00000012   0xF01E    994        0/0/0/1
+  Spine01.00-00         0x00000014   0xA01E    764        0/0/0/1
+  Spine02.00-00       * 0x0000000E   0xBEED    977        0/0/0/1
+```
+#### Leaf01
+```
+Leaf01# sh isis 1 adjacency
+IS-IS process: 1 VRF: default
+IS-IS adjacency database:
+Legend: '!': No AF level connectivity in given topology
+System ID       SNPA            Level  State  Hold Time  Interface
+Spine01         N/A             1      UP     00:00:21   Ethernet1/1
+Spine02         N/A             1      UP     00:00:27   Ethernet1/2
+```
+```
+sh isis 1 database
+IS-IS Process: 1 LSP database VRF: default
+IS-IS Level-1 Link State Database
+  LSPID                 Seq Number   Checksum  Lifetime   A/P/O/T
+  Leaf01.00-00        * 0x00000013   0xBFC4    855        0/0/0/1
+  Leaf02.00-00          0x00000013   0x57F1    887        0/0/0/1
+  Leaf03.00-00          0x00000012   0xF01E    950        0/0/0/1
+  Spine01.00-00         0x00000014   0xA01E    722        0/0/0/1
+  Spine02.00-00         0x0000000E   0xBEED    933        0/0/0/1
+```
+#### Leaf02
+```
+Leaf02# sh isis 1 adjacency
+IS-IS process: 1 VRF: default
+IS-IS adjacency database:
+Legend: '!': No AF level connectivity in given topology
+System ID       SNPA            Level  State  Hold Time  Interface
+Spine01         N/A             1      UP     00:00:23   Ethernet1/1
+Spine02         N/A             1      UP     00:00:32   Ethernet1/2
+```
+```
+Leaf02# sh isis 1 database
+IS-IS Process: 1 LSP database VRF: default
+IS-IS Level-1 Link State Database
+  LSPID                 Seq Number   Checksum  Lifetime   A/P/O/T
+  Leaf01.00-00          0x00000013   0xBFC4    806        0/0/0/1
+  Leaf02.00-00        * 0x00000013   0x57F1    842        0/0/0/1
+  Leaf03.00-00          0x00000012   0xF01E    903        0/0/0/1
+  Spine01.00-00         0x00000014   0xA01E    676        0/0/0/1
+  Spine02.00-00         0x0000000E   0xBEED    887        0/0/0/1
+```
+#### Leaf03
+```
+Leaf03# sh isis 1 adjacency
+IS-IS process: 1 VRF: default
+IS-IS adjacency database:
+Legend: '!': No AF level connectivity in given topology
+System ID       SNPA            Level  State  Hold Time  Interface
+Spine01         N/A             1      UP     00:00:28   Ethernet1/1
+Spine02         N/A             1      UP     00:00:30   Ethernet1/2
+```
+```
+Leaf03# sh isis 1 database
+IS-IS Process: 1 LSP database VRF: default
+IS-IS Level-1 Link State Database
+  LSPID                 Seq Number   Checksum  Lifetime   A/P/O/T
+  Leaf01.00-00          0x00000013   0xBFC4    773        0/0/0/1
+  Leaf02.00-00          0x00000013   0x57F1    807        0/0/0/1
+  Leaf03.00-00        * 0x00000012   0xF01E    872        0/0/0/1
+  Spine01.00-00         0x00000014   0xA01E    642        0/0/0/1
+  Spine02.00-00         0x0000000E   0xBEED    853        0/0/0/1
+```
+### Вывод связности между устройствами PC1, PC2, PC3
