@@ -327,3 +327,11 @@ IS-IS Level-1 Link State Database
   Spine02.00-00         0x0000000E   0xBEED    853        0/0/0/1
 ```
 ### Вывод связности между устройствами PC1, PC2, PC3
+#### PC1
+![PC1](PC1.PNG)
+
+#### PC2
+![PC2](PC2.PNG)
+
+#### PC3
+![PC3](PC3.PNG)
