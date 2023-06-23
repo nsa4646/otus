@@ -34,3 +34,41 @@
 
 ### Конфигурация устройств
 #### Spine01
+```
+feature isis
+interface Ethernet1/1
+  description Leaf01 e1/1
+  no switchport
+  ip address 172.16.0.11/31
+  no shutdown
+interface Ethernet1/2
+  description Leaf02 e1/1
+  no switchport
+  ip address 172.16.0.15/31
+  no shutdown
+interface Ethernet1/3
+  description Leaf03 e1/1
+  no switchport
+  ip address 172.16.0.19/31
+  no shutdown
+feature bgp
+router bgp 65004
+  router-id 10.10.10.4
+  bestpath as-path multipath-relax
+  log-neighbor-changes
+  template peer Leafs
+    password 3 4258f34a25410d21
+    address-family ipv4 unicast
+  neighbor 172.16.0.10
+    inherit peer Leafs
+    remote-as 65001
+    description Leaf01
+  neighbor 172.16.0.14
+    inherit peer Leafs
+    remote-as 65002
+    description Leaf02
+  neighbor 172.16.0.18
+    inherit peer Leafs
+    remote-as 65003
+    description Leaf03
+``` 
