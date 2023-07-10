@@ -98,13 +98,13 @@ interface Ethernet1/3
   ip address 172.16.0.21/31
   no shutdown
  interface loopback0
-  ip address 10.10.10.4/32 
+  ip address 10.10.10.5/32 
 router bgp 65005
-  router-id 10.10.10.4
+  router-id 10.10.10.5
   bestpath as-path multipath-relax
   log-neighbor-changes
   address-family ipv4 unicast
-    network 10.10.10.4/32
+    network 10.10.10.5/32
   template peer Leafs
     password 3 4258f34a25410d21
     address-family ipv4 unicast
