@@ -59,6 +59,7 @@ router bgp 65004
   log-neighbor-changes
   address-family ipv4 unicast
     network 10.10.10.4/32
+    maximum-paths 64
   template peer Leafs
     password 3 4258f34a25410d21
     address-family ipv4 unicast
@@ -105,6 +106,7 @@ router bgp 65005
   log-neighbor-changes
   address-family ipv4 unicast
     network 10.10.10.5/32
+    maximum-paths 64
   template peer Leafs
     password 3 4258f34a25410d21
     address-family ipv4 unicast
@@ -151,6 +153,7 @@ router bgp 65001
   address-family ipv4 unicast
     network 10.1.10.0/24
     network 10.10.10.1/32
+    maximum-paths 64
   template peer Spines
     password 3 4258f34a25410d21
     address-family ipv4 unicast
@@ -189,6 +192,7 @@ router bgp 65002
   address-family ipv4 unicast
     network 10.2.20.0/24
     network 10.10.10.2/32
+    maximum-paths 64
   template peer Spines
     password 3 4258f34a25410d21
     address-family ipv4 unicast
@@ -227,6 +231,7 @@ router bgp 65003
   address-family ipv4 unicast
     network 10.3.30.0/24
     network 10.10.10.3/32
+    maximum-paths 64
   template peer Spines
     password 3 4258f34a25410d21
     address-family ipv4 unicast
