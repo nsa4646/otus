@@ -2,10 +2,11 @@
 ### Цели
 1. Распределить адресное пространство на Underlay сети.
 2. Настроить IP связанность между всеми устройствами Arista.
-3. Настроить BGP peering между Leaf и Spine в AF l2vpn evpn на устройствах Arista.
+3. Настроить BGP peering между Leaf и Spine в AF l2vpn evpn на устройствах Arista (Vlan-Based).
 3. Настроить аутентификацию на интерфесах между BGP соседями.
 4. Проверить соседство и топологию между BGP соседями через l2vpn.
 5. Проверить связность между PC1, PC2.
+6. В качестве дополнения выполнить настройку l2vpn evpn на примере vlan-aware-bundle.
 ### Реализовать схему
 ![VxLAN. EVPN L2](Topology.PNG)
 
@@ -285,3 +286,28 @@ Leaf02#sh bgp evpn
 
 #### PC4
 ![PC4](PC4.PNG)
+
+### Дополнение. Настройку l2vpn evpn на примере vlan-aware-bundle
+#### Leaf01
+```
+router bgp 65001
+no vlan 10
+no vlan 20
+   vlan-aware-bundle BUNDLE
+      rd 10.10.10.1:10000
+      route-target both 1:10000
+      redistribute learned
+      vlan 10,20
+```
+#### Leaf02
+```
+router bgp 65002
+no vlan 10
+no vlan 20
+   vlan-aware-bundle BUNDLE
+      rd 10.10.10.2:10000
+      route-target both 1:10000
+      redistribute learned
+      vlan 10,20
+```
+Связность не нарушилась. Устрйоства PC1, PC4 и PC2, PC3 пингуют друг друга в свойем широковещательном домене.
