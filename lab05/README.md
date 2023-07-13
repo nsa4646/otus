@@ -18,9 +18,13 @@
 | Leaf01        | Ethernet1 | 172.16.0.10  | /31  |
 |               | Ethernet3 | vlan10       |      |
 |               | Ethernet4 | vlan20       |      |
+|               | Loopback0 | 10.10.10.1   | /32  |
+|               | Loopback1 | 10.10.11.1   | /32  |
 | Leaf02        | Ethernet1 | 172.16.0.14  | /31  |
 |               | Ethernet3 | vlan20       |      |
 |               | Ethernet4 | vlan10       |      |
+|               | Loopback0 | 10.10.10.2   | /32  |
+|               | Loopback1 | 10.10.11.2   | /32  |
 | PC1           | Ethernet0 | 10.1.10.2    | /24  |
 | PC2           | Ethernet0 | 10.2.20.2    | /24  |
 | PC3           | Ethernet0 | 10.2.20.3    | /24  |
