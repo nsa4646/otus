@@ -284,4 +284,4 @@ Leaf02#sh bgp evpn
 ![PC3](PC3.PNG)
 
 #### PC4
-![Alt text](PC4.PNG)
+![PC4](PC4.PNG)
