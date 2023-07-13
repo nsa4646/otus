@@ -287,7 +287,7 @@ Leaf02#sh bgp evpn
 #### PC4
 ![PC4](PC4.PNG)
 
-### Дополнение. Настройку l2vpn evpn на примере vlan-aware-bundle
+### Дополнение. Настройка l2vpn evpn на примере vlan-aware-bundle
 #### Leaf01
 ```
 router bgp 65001
