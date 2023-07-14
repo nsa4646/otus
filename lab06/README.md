@@ -358,3 +358,11 @@ Leaf02#sh ip route vrf PROD
  C        10.2.20.0/24 is directly connected, Vlan20
  B I      10.3.30.2/32 [200/0] via VTEP 10.10.11.1 VNI 65001 router-mac 50:0b:00:57:9d:f0 local-interface Vxlan1
 ```
+
+### Вывод связности между устройствами на примере PC3 PROD_LB_1
+#### PC3 PROD_LB_1
+В предедах одного Leaf01  и одного vtep 10.10.11.1
+![PC3 PROD_LB_1](<PC3 PROD_LB_1.PNG>)
+В предедах другого Leaf02  и разного vtep 10.10.11.2
+![PC3 PROD_LB_1](<PC3 PROD_LB_1_2.PNG>)
+
