@@ -207,3 +207,34 @@ router bgp 65001
    address-family ipv4
       no neighbor SPINE_OVERLAY activate
 ```
+#### PC1 PROD_WEB_1
+```
+IP/MASK: 10.1.10.2/24  
+GATEWAY: 10.1.10.1
+```  
+#### PC2 PROD_DB_1
+```
+IP/MASK: 10.2.20.2/24  
+GATEWAY: 10.2.20.1
+```  
+#### PC3 PROD_LB_1
+```
+IP/MASK: 10.3.30.2/24  
+GATEWAY: 10.3.30.1  
+```
+#### PC4 PROD_WEB_2
+```
+IP/MASK: 10.1.10.3/24  
+GATEWAY: 10.1.10.1  
+```
+#### PC5 PROD_DB_2
+```
+IP/MASK: 10.2.20.3/24  
+GATEWAY: 10.2.20.1 
+``` 
+
+### Вывод BGP, evpn соседства и топологии между устрйоствами
+#### Spine01
+```
+
+```
