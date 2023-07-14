@@ -127,6 +127,9 @@ router bgp 65001
 ```
 #### Leaf02
 ```
+ip routing
+mpls ip
+service routing protocols model multi-agent
 vlan 10,20
 interface Ethernet1
    no switchport
